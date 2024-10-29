@@ -4,7 +4,9 @@
 
 ## create the Huawei cloud service
 
-After following the guide of Laboratory manual, i have create the Huawei cloud service successfully, and i can connect to the service by 'ssh' command in my alacritty terminal.
+After following the guide of Laboratory manual, i have create the Huawei cloud service successfully, and i can connect to the service by 
+`ssh root@<my public net IP>`
+command in my alacritty terminal.
 
 ![this is my Huawei-cloud-service](README1/Huaweicloud.png "this is my Huawei-cloud-service screenshot.")
 
@@ -58,6 +60,7 @@ Because the fork command create a new process, it is a copy of parent, they have
 #### 2.b
 
 In this case, i add a line
+
 `global = 2004+pid;`
 
 before the return, here is the result:
@@ -74,7 +77,7 @@ I modify the code like these two:
 
 ![code2](README1/1-2.5.png "exec")
 
-to use system and exec to execute the `system_call`.
+to use *system* and *exec* to execute the *`system_call`*.
 
 And here is the result:
 
@@ -88,7 +91,13 @@ So we can find the two has been excuted normally.
 ## complete the lab 1.2
 
 ### thread
-For this, i create a .c file, inside this i create two thread, each thread have a loop with 5001 times, in thread1 execute `global++;`, in thread2 execute `global-=2`(global is initialize as 2024).
+For this, i create a .c file, inside this i create two thread, each thread have a loop with 5001 times, in thread1 execute 
+
+*`global++;`*
+
+in thread2 execute 
+
+*`global-=2`  (global is initialize as 2024)*.
 
 Here is the result:
 
@@ -96,7 +105,7 @@ Here is the result:
 
 We can find that the result is different.
 
-Because the operate is not atomtic, there is a race condition, it will cause the result is different due to the schedule of the CPU, and the schedule is invisiable and unpredictable, it cause the result is "randomly".
+Because the operate is not atomtic, there is a race condition, it will cause the result is different due to the schedule of the CPU, and the schedule is invisiable and unpredictable, it cause the result is *"randomly"*.
 
 So, to make the result relable, i add a mute lock to this program, like this:
 
@@ -111,7 +120,7 @@ Now, the result is predictable.
 
 ### system and exec 
 
-Use the thread to execute the `system_call` by system and exec, i create two version of code like these:
+Use the thread to execute the *`system_call`* by *system* and *exec*, i create two version of code like these:
 
 ![code](README1/2-4.png "code system")
 
@@ -123,14 +132,26 @@ And here are the result:
 
 ![code](README1/2-7.png "result exec")
 
-We can find that, the result of the two is different. In the thread, we use exec to execute the `system_call`, then may will not output `thread2 pid=??, tid=??`, that is because, if we use exec in a thread, it will replace this process, it will change the remain process.
+We can find that, the result of the two is different. In the thread, we use exec to execute the *`system_call`*, then may will not output 
+
+*`thread2 pid=??, tid=??`*
+
+that is because, if we use *exec* in a thread, it will replace this process, it will change the remain process.
 
 
 ## complete the lab 1.3
 
-In this lab, i create two threads in the main function, and one thread is to execute `shared_value++;` for 5000 times, the other is to execute `shared_value-=2;` for 5000 times.
+In this lab, i create two threads in the main function, and one thread is to execute 
 
-In this program, i use the lock to complete the mute and sync..
+*`shared_value++;`* 
+
+for 5000 times, the other is to execute 
+
+*`shared_value-=2;`*
+
+for 5000 times.
+
+In this program, i use the lock to complete the mute and *sync.*.
 
 Here is the result:
 
