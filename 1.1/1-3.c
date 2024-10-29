@@ -36,8 +36,8 @@ int main(){
 
 
         }
-        global=2004;
-        printf("now global = %d \n",global);
+        global=2004+pid;
+        printf("now global (before return) = %d \n",global);
         return 0;
 
 
