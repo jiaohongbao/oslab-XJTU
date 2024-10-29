@@ -35,11 +35,11 @@ while remove the `wait(NULL)`, the result is:
 
 ![result 2](README1/1-1.2.png "result when remove the wait")
 
-Let's analysis what is the difference of these two cases.
+Let's analysis what is the difference between these two cases.
 
 The function of wait can make the parent process always terminated after the child process, if we remove the wait(NULL), parent process maybe terminated before the child process is terminated, it will cause the child process become a zomibe. 
 
-This change will change the output sequencial theoretically, but because the wait(NULL) is the last line to be execute in parent process, so the output do not looks different(but there are some change actually). 
+This change will change the output sequencial theoretically, but because the wait(NULL) is the last line to be execute in parent process, so the output do not looks different(but there are some changes exactly). 
 
 ### question 2 
 
@@ -53,7 +53,7 @@ Here is the code and result:
 
 ![result](README1/1-2.2.png "result")
 
-The result is, the 'value' in parent process and child process is different.
+The result is, the *'value'* in parent process and child process is different.
 
 Because the fork command create a new process, it is a copy of parent, they have same status, but the variable can't not share, so they will change the value seperately.
 
