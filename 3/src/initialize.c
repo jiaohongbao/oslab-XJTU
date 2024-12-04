@@ -22,7 +22,7 @@ void initialize_memory(void) {
   gdt.bg_free_inodes_count = INODE_COUNT;
   gdt.bg_used_dirs_count = 0;
   current_dir = 1;
-  strcpy(current_path, "root");
+  strcpy(current_path, "~");
 }
 
 void initialize_disk(void) {

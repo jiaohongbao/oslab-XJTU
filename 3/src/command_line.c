@@ -137,7 +137,7 @@ void dir(void) {
   printf("name      ");
   printf("type    ");
   printf("mode    ");
-  printf("size(Byte)   ");
+  printf("size(Bytes)   ");
   printf("creat time                ");
   printf("access time               ");
   printf("modify time               \n");
