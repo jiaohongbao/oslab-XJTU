@@ -331,6 +331,9 @@ unsigned short print_dir(unsigned short block) {
     case 2:
       printf("__w__    ");
       break;
+    case 5:
+      printf("r__x_     ");
+      break;
     case 4:
       printf("r____    ");
       break;
@@ -340,6 +343,8 @@ unsigned short print_dir(unsigned short block) {
     case 7:
       printf("r_w_x    ");
       break;
+    case 1:
+      printf("____x_    ");
     default:
       printf("error  ");
     }

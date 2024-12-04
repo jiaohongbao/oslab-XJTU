@@ -289,7 +289,7 @@ void attrib(char name[], unsigned char change) {
   if (i == 0)
     printf("The file does not exist.\n");
   else {
-    if (change == 2 || change == 4 || change == 6 || change == 7) {
+    if (change == 2 || change == 4 || change == 6 || change == 7 ||change == 5 || change ==1) {
       load_inode_entry(i);
       ((unsigned char *)(&(inode_buf.i_mode)))[1] = change;
       inode_buf.i_atime = time(NULL);
