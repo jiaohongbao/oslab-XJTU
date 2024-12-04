@@ -9,6 +9,20 @@
 #include <string.h>
 #include <time.h>
 
+
+void cwrite(char name[]){
+  
+  close(name);
+
+  delete(name);
+
+  create(name);
+
+  open(name);
+
+  write(name);
+}
+
 void stopWrite() { flag = 0; }
 void write(char name[]) {
   unsigned short i = search_file(name);

@@ -5,6 +5,8 @@
 #include <time.h>
 
 
+void cwrite(char name[]);
+
 unsigned short login(char password[]);
 
 void change_password(void);

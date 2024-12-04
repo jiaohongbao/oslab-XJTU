@@ -32,6 +32,8 @@ void shell(void) {
       delete (cmd + 7);
     } else if (!strncmp(cmd, "cd ", 3)) {
       cd(cmd + 3);
+    } else if (!strncmp(cmd, "cwrite ", 7)) {
+      cwrite(cmd + 7);
     } else if (!strncmp(cmd, "chmod ", 6)) {
       printf("change properties to: ");
       unsigned char change;
