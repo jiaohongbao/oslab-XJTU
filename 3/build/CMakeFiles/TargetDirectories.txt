@@ -1,0 +1,3 @@
+/home/Jiao/git/oslab-XJTU/3/build/CMakeFiles/EXT2_SYSTEM.dir
+/home/Jiao/git/oslab-XJTU/3/build/CMakeFiles/edit_cache.dir
+/home/Jiao/git/oslab-XJTU/3/build/CMakeFiles/rebuild_cache.dir
