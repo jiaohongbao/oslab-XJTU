@@ -4,6 +4,7 @@
 #include "fundamental.h"
 #include "initialize.h"
 #include "user_interface.h"
+#include"main_function.h"
 #include <signal.h>
 #include <stdio.h>
 #include <string.h>
@@ -48,7 +49,12 @@ void shell(void) {
       read(cmd + 5);
     } else if (!strncmp(cmd, "write ", 6)) {
       write(cmd + 6);
-    } else if (!strcmp(cmd, "quit")) {
+    } else if(!strcmp(cmd, "quit-log")){
+      fclose(fp);
+      main_function();
+    }
+      
+      else if (!strcmp(cmd, "quit")) {
       break;
     } else {
       printf("bash : %s : command not found.\n", cmd);
