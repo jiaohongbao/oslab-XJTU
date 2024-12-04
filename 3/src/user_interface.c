@@ -18,7 +18,7 @@ void shell(void) {
       format();
     } else if (!strcmp(cmd, "check")) {
       check_disk();
-    } else if (!strcmp(cmd, "passwd")) {
+    } else if (!strcmp(cmd, "password")) {
       change_password();
     } else if (!strcmp(cmd, "ls")) {
       dir();
@@ -33,7 +33,7 @@ void shell(void) {
     } else if (!strncmp(cmd, "cd ", 3)) {
       cd(cmd + 3);
     } else if (!strncmp(cmd, "chmod ", 6)) {
-      printf("modification: ");
+      printf("change properties to: ");
       unsigned char change;
       scanf("%hhu", &change);
       getchar();

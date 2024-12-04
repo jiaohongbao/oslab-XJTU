@@ -19,7 +19,7 @@ void main_function(void) {
     fp = fopen("./Ext2", "wb+");
     initialize_disk();
   }
-
+  printf("please login. \n");
   printf("Password: ");
   char password[10];
   gets_s(password, 9);
