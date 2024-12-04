@@ -193,10 +193,10 @@ void rmdir(char name[]) {
       printf("command not found.\n");
       return;
     }
-    if (inode_buf.i_size != 17) {
-      printf("Cannot delete non empty directory!\n");
-      return;
-    }
+    //if (inode_buf.i_size != 17) {
+    //  printf("Cannot delete non empty directory!\n");
+    //  return;
+    //}
 
     access_file(current_dir, delete_in_block);
     access_file(i, free_file_block);
