@@ -8,13 +8,13 @@
 
 
 void* threadFunction1(void* arg){
-        system("~/1.2/system_call");
+        system("./system_call");
 
         printf("thread1 pid=%d,tid=%d \n",getpid(),syscall(SYS_gettid));
         return NULL;
 }
 void* threadFunction2(void* arg){
-        system("~/1.2/system_call");
+        system("./system_call");
 
         printf("thread2 pid=%d,tid=%d \n",getpid(),syscall(SYS_gettid));
         return NULL;

@@ -12,8 +12,8 @@ int main(){
         */
         pid_t pid=getpid();
         printf("System call Process ID: %d \n",pid);
-        pthread_t tid=syscall(SYS_gettid);
-        printf("System call Thread ID: %d \n",tid);
+        //pthread_t tid=syscall(SYS_gettid);
+        //printf("System call Thread ID: %d \n",tid);
         return 0;
 }
 

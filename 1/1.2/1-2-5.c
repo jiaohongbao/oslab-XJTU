@@ -10,14 +10,14 @@
 void* threadFunction1(void* arg){
         printf("thread1 pid=%d,tid=%d \n",getpid(),syscall(SYS_gettid));
 
-        execl("/bin/sudo","sudo","/root/1.2/system_call",NULL);
+        execl("/bin/sudo","sudo","./system_call",NULL);
         //execl("sudo ./root/1.2/system_call","system_call",NULL);
                 return NULL;
 }
 void* threadFunction2(void* arg){
         printf("thread2 pid=%d,tid=%d \n",getpid(),syscall(SYS_gettid));
 
-        execl("/bin/sudo","sudo","/root/1.2/system_call",NULL);
+        execl("/bin/sudo","sudo","./system_call",NULL);
         //execl("sudo ./root.1.2/system_call","system_call",NULL);
         return NULL;
 }

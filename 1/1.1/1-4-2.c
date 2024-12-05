@@ -21,7 +21,7 @@ int main(){
                 printf("child: pid = %d \n",pid);
                 printf("child: pid1 = %d \n",pid1);
                 global=24;
-                printf("child's global = %d \n",global);
+                printf("child's global = %d, add = %d\n",global, &global);
 /*
                 execlp("/bin/sh","sh","-c","echo Process ID: $$",NULL);
                 perror("execlp failed.");
@@ -29,10 +29,13 @@ int main(){
 */
 
 
-                if(execl("/bin/sudo","sudo","/root/1.1/system_call",NULL)==-1){
+                if(execl("/bin/sudo","sudo","./execl",NULL)==-1){
 
                         perror("Execl failed. \n");
                 }
+                //if(execlp("ls","ls",NULL) == -1){
+                 // perror("Execl failed. \n");
+                //}
 
         }
 
@@ -42,7 +45,7 @@ int main(){
                 printf("parent: pid1 = %d \n",pid1);
                 wait(NULL);
                 global=88;
-                printf("parent's global = %d \n",global);
+                printf("parent's global = %d ,add = %d \n",global, &global);
 
 
         }

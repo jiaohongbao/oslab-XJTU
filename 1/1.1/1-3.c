@@ -21,7 +21,7 @@ int main(){
                 printf("child: pid = %d \n",pid);
                 printf("child: pid1 = %d \n",pid1);
                 global=24;
-                printf("child's global = %d \n",global);
+                printf("child's global = %d , add = %d \n",global, &global);
 
 
         }
@@ -32,7 +32,7 @@ int main(){
                 printf("parent: pid1 = %d \n",pid1);
                 wait(NULL);
                 global=88;
-                printf("parent's global = %d \n",global);
+                printf("parent's global = %d , add = %d \n",global, &global);
 
 
         }

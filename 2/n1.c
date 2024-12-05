@@ -20,11 +20,11 @@ void alrm_handler() {
         kill(pid2, 17);
 }
 void child1(){
-    printf("\nChild process1 is killed by parent!!\n");
+    printf("\nChild process1 is killed by parent.\n");
     flag=0;
 }
 void child2(){
-    printf("\nChild process2 is killed by parent!!\n");
+    printf("\nChild process2 is killed by parent.\n");
     flag=0;
 }
 void child_handler(int signum) {
