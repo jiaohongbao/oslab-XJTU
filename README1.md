@@ -29,11 +29,11 @@ to create an execuable-file named 1-1, then i use the command:
 
 to impement my program many times, like this:
 
-![this is my result](README1/1-1.1.png "result of run 1-1.c")
+![this is my result](report/1/1.1/1.png "result of run 1-1.c")
 
 while remove the `wait(NULL)`, the result is:
 
-![result 2](README1/1-1.2.png "result when remove the wait")
+![result 2](report/1/1.1/2.png "result when remove the wait")
 
 Let's analysis what is the difference between these two cases.
 
@@ -47,11 +47,9 @@ This change will change the output sequencial theoretically, but because the wai
 
 I define a global variable named global, initialize it as 2004. Then i change is value to 24 in child process and 88 in parent process. 
 
-Here is the code and result:
+Here is the result:
 
-![code](README1/1-2.1.png "code")
-
-![result](README1/1-2.2.png "result")
+![result](report/1/1.1/3.png "result")
 
 The result is, the *'value'* in parent process and child process is different.
 
@@ -65,25 +63,20 @@ In this case, i add a line
 
 before the return, here is the result:
 
-![result](README1/1-2.3.png "result")
+![result](report/1/1.1/4.png "result")
+
 
 We can find that the line of code above have been executed both in parent and child process, and because the variable are not shared, so output the value before return is different.
 
 #### 2.c
 
-I modify the code like these two:
-
-![code1](README1/1-2.4.png "system")
-
-![code2](README1/1-2.5.png "exec")
-
-to use *system* and *exec* to execute the *`system_call`*.
+I modify the code to use the function of `system` and `execl` in the child process, one of them use `system` to call the execuable-file `system_call`, the other use `execl` to call the execuable-file `execl`.
 
 And here is the result:
 
-![result](README1/1-2.6.png "result_system")
+![result](report/1/1.1/5.png "result_system")
 
-![result](README1/1-2.7.png "result exec")
+![result](report/1/1.1/6.png "result exec")
 
 So we can find the two has been excuted normally.
 
@@ -101,7 +94,7 @@ in thread2 execute
 
 Here is the result:
 
-![result](README1/2-1.png "result")
+![result](report/1/1.2/1.png "result")
 
 We can find that the result is different.
 
@@ -113,24 +106,20 @@ So, to make the result relable, i add a mute lock to this program, like this:
 
 and run it again, here is the result:
 
-![result](README1/2-3.png "result")
+![result](report/1/1.2/2.png "result")
 
 Now, the result is predictable.
 
 
 ### system and exec 
 
-Use the thread to execute the *`system_call`* by *system* and *exec*, i create two version of code like these:
-
-![code](README1/2-4.png "code system")
-
-![code](README1/2-5.png "code exec")
+Use the thread to execute the *`system_call`* by *system* and *exec*, i create two version of code.
 
 And here are the result:
 
-![result](README1/2-6.png "result system")
+![result](report/1/1.2/3.png "result system")
 
-![code](README1/2-7.png "result exec")
+![code](report/1/1.2/4.png "result exec")
 
 We can find that, the result of the two is different. In the thread, we use exec to execute the *`system_call`*, then may will not output 
 
@@ -155,7 +144,7 @@ In this program, i use the lock to complete the mute and *sync.*.
 
 Here is the result:
 
-![result](README1/3-1.png "result")
+![result](report/1/1.3/5.png "result")
 
 We can find result is standable, the lock goes correctly.
 

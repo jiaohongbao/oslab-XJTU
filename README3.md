@@ -34,21 +34,42 @@ finally, I build all this project in the `build/`
 
 ![ninja](README3/4.png "ninja")
 
+---------------------------------------------------------
+
+allow files' architecture is:
+
+![tree1](report/3/tree1.png "tree1")
+
+![tree2](report/3/tree2.png "tree2")
+
 
 
 ## result show
 
 ### login
 
-![login](README3/5.png)
+![login](report/3/1.png)
+
+### quit-log(relogin)
+
+![relogin](report/3/2.png "relogin")
+
 
 ### ls 
 
 ![ls](README3/6.png)
 
+### mkdir 
+
+![mkdir](report/3/4.png "mkdir")
+
 ### create 
 
-![create](README3/7.png)
+![create](report/3/5.png "create")
+
+### rmdir(delete folder/directory)
+
+![rmdir](report/3/6.png "rmdir")
 
 ### delete
 
@@ -60,23 +81,57 @@ finally, I build all this project in the `build/`
 
 ### open close write read
 
-![close and open](README3/10.png)
+![read and write](report/3/7.png "read and write")
+
+### overwrite
+
+![overwrite](report/3/8.png "overwrite")
+
+### last access time and modify time 
+
+![a and m](report/3/9.png)
+
+![a and m 2](report/3/10.png)
+
+last access time and modify time:
+
+![time](report/3/13.png)
+
+### `chmod` and protection 
+
+![protection](report/3/10.png "protection")
+
+![chmod](report/3/11.png "chmod")
+
+
 
 ### check and format 
 
-![check and format](README3/11.png)
+![check and format](report/3/12.png "format")
+
+![check](report/3/14.png "check")
+
+
 
 ### password
 
-![password](README3/12.png)
+![password](report/3/2.png "change password")
 
-### time
+relogin:
 
-![time](README3/13.png)
+![password2](report/3/3.png "relogin")
 
-### protection
 
-![protection](README3/14.png)
+
+### `quit` (quit this program) and `quit-log` (quit crruent user)
+
+`quit`
+
+![quit](report/3/16.png "quit")
+
+`quit-log`
+
+![quit-log](report/3/15.png "quit-log")
 
 
 

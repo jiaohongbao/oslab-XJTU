@@ -27,13 +27,7 @@ and another version of *kill*
 
 *The second step is to create the soft interrupt program as the flow chart.*
 
-
-![code](README2/3.png "the code of soft interrupt program(1)")
-
-![code](README2/4.png "the code of soft interrupt program(2)")
-
-![code](README2/c4.png "the code of soft interrupt program(3)")
-
+I create the file of `n1.c` to achieve the signal interrupt.
 
 At first, I define parent and alrm_handler function, it is used to send signal to both two child process, 16 for child1, 17 for child2, the alrm_handler it will be used when parent process does not receive the signal from keyboard automaticly.
 
@@ -63,7 +57,7 @@ So, after 5 seconds or input the signal, all process will be killed.
 
 The result is here:
 
-![result:ctrl+|](README2/5.png "result1")
+![result:ctrl+|](report/2/1.png "result1")
 
 
 There are some questions.
@@ -96,12 +90,12 @@ The answer will be pause. By using pause, the process can do nothing but waittin
 
 The result of InPipe with no lock:
 
-![result](README2/7.png "without lock")
+![result](report/2/4.png "without lock")
 
 
 Here is the result InPipe with lock:
 
-![result](README2/8.png "lock")
+![result](report/2/2.png "lock")
 
 1. I think the result with lock will be perfectly output all the '1' first, and then '2'; the result without lock will be unordered.
 
@@ -109,7 +103,7 @@ Here is the result InPipe with lock:
 
 By the way, I tried just give lock to child2, the result will be 
 
-![result](README2/9.png "with one lock")
+![result](report/2/3.png "with one lock")
 
 the result is simmilar to with no lock.
 
@@ -145,20 +139,20 @@ Least Recently Used is another way to fire this. When we need to choose the vict
 
 When the input as follow(FIFO):
 
-![input](README2/10.png "input")
+page_table : 10
+
+frame : 5 
+
+reference : 20
 
 
 The result is:
 
-![result](README2/11.png "result")
+![result](report/2/5.1.png "result")
 
-When the input as follow(LRU):
+When the same input, the LRU algorithm's result is:
 
-![input](README2/12.png "input of LRU")
-
-The result is:
-
-![result](README2/13.png "result")
+![result](report/2/6.1.png "result")
 
 So, the result conclution that the LRU algorithm is better than FIFO in Hit-rate, but it will cause a extra overhead(because we need record the time-stamp of each page).
 
@@ -167,9 +161,9 @@ So, the result conclution that the LRU algorithm is better than FIFO in Hit-rate
 
 When we come to belady situation:
 
-![result of belady](README2/14.png "result of belady")
+![result of belady](report/2/7.png "result of belady")
 
-
+![result of belady2](report/2/8.png "result of belady2")
 
 
 
