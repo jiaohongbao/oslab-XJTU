@@ -33,9 +33,11 @@ int main(){
 
                         perror("Execl failed. \n");
                 }
-                //if(execlp("ls","ls",NULL) == -1){
-                 // perror("Execl failed. \n");
+                //if(execl("/bin/sudo","sudo","./system_call",NULL)==-1){
+
+                //        perror("Execl failed. \n");
                 //}
+                
 
         }
 
